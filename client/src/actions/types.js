@@ -1,0 +1,7 @@
+export const FETCH_STUDENTS = 'FETCH_STUDENTS';
+export const DELETE_STUDENT = 'DELETE_STUDENT';
+export const SELECT_STUDENT = "SELECT_STUDENT";
+export const EDIT_STUDENT = " EDIT_STUDENT";
+export const CLEAR_SELECT = "CLEAR_SELECT";
+export const CREATE_STUDENT = "CREATE_STUDENT";
+
