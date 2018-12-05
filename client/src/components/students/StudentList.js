@@ -46,20 +46,18 @@ class StudentList extends React.Component {
     const { students } = this.props;
     if (students.length === 0) {
       return (
-        <div> 
-          <h1>There are currently no students in the database. Please click "Create Student"</h1>
-           <h2><Link to="/create">Create Student</Link></h2>
+        <div className="ui-card"> 
+          <h1>There are currently no students in the database</h1>
+          <h2><Link to="/create">Create Student +</Link></h2>
         </div>
       );
     }
 
     return (
       <div>
-        <Link to="/create">
-          <div className="ui card">
-              <h1>Create Student + </h1>
-          </div>
-        </Link>
+        <div className="ui-card">
+          <Link to="/create"><h1>Create Student + </h1></Link>
+        </div>
         <div className="card-container">
           {this.props.students.map(this.renderCard)}
         </div>
