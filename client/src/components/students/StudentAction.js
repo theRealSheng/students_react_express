@@ -31,7 +31,7 @@ class StudentAction extends React.Component {
         </div>
         <div><img alt={student.firstName} src={student.photo} /></div>
         <h2>{student.firstName} {student.lastName}</h2>
-        <h3>Birthday: {student.birthday}</h3>
+        <h3>Age: {student.age}</h3>
         <h3>Hobbies: </h3>
         <ul>{hobbyList}</ul>
           <div className="btn-container">
