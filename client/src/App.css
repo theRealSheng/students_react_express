@@ -11,6 +11,12 @@ img {
   object-fit: cover;
 }
 
+.img-action {
+  height: 35vh;
+  width: 20vw;
+  min-width: 20em;
+}
+
 a,
 button {
   color: black;
@@ -123,6 +129,16 @@ form {
 
 .wrapper {
   margin: 0 33%;
+}
+
+.grid-detail {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 3em;
+}
+
+.detail-right{
+  min-width: 20em;
 }
 
 .btn-back {

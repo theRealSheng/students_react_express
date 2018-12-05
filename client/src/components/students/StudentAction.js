@@ -29,15 +29,21 @@ class StudentAction extends React.Component {
         <div className="headline-wrapper">
           <h1>Review Student</h1>
         </div>
-        <div><img alt={student.firstName} src={student.photo} /></div>
-        <h2>{student.firstName} {student.lastName}</h2>
-        <h3>Age: {student.age}</h3>
-        <h3>Hobbies: </h3>
-        <ul>{hobbyList}</ul>
-          <div className="btn-container">
-            <Link className="primary" to="/student-edit">Edit</Link>
-            <button onClick={this.onDeleteClick} className="btn danger">Delete</button>
+        <div className="grid-detail">
+          <div>
+            <img className="img-action" alt={student.firstName} src={student.photo} />
           </div>
+          <div className="detail-right">
+            <h2>{student.firstName} {student.lastName}</h2>
+            <h3>Age: {student.age}</h3>
+            <h3>Hobbies: </h3>
+            <ul>{hobbyList}</ul>
+            <div className="btn-container">
+              <Link className="primary" to="/student-edit">Edit</Link>
+              <button onClick={this.onDeleteClick} className="btn danger">Delete</button>
+            </div>
+          </div>
+        </div>
       </div>
     );
   }
