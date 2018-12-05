@@ -77,6 +77,12 @@ class StudentEdit extends React.PureComponent {
             component={this.renderInput}
           />
           <Field 
+            label="Photo link"
+            name="photo"
+            initialValue={student.photo}
+            component={this.renderInput}
+          />
+          <Field 
             label="Hobbies"
             name="hobbies"
             initialValue={student.hobbies.join(',')}
