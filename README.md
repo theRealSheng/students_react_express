@@ -8,7 +8,7 @@
   - 5) Press CTRL + C to exit
   - 6) Run command: npm run dev
 
-### Front 
+### Front (client folder)
   - 1) Open folder client in terminal
   - 2) Run command: npm installs
   - 3) Run command: npm start
