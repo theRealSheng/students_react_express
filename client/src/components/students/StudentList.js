@@ -21,9 +21,9 @@ class StudentList extends React.Component {
     }
 
     return(
-      <div>
+      <div key={student.email}>
         <Link onClick={() => this.onClickSelect(student)} to={`/student-detail`}>
-          <div key={student.email} className="ui card">
+          <div className="note">
             <div className="image">
               <img src={student.photo} alt={student.name}/>
             </div>

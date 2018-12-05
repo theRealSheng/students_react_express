@@ -38,7 +38,7 @@ class StudentCreate extends React.Component {
     const { handleSubmit } = this.props;
 
     return (
-      <div>
+      <div className="note">
         <form onSubmit={handleSubmit(this.onSubmit)}>
           <Field 
             label="Email"

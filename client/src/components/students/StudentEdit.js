@@ -49,7 +49,7 @@ class StudentEdit extends React.PureComponent {
       return <div>{this.props.history.push('/')}</div>;
     }
     return (
-      <div>
+      <div className="note">
         <form onSubmit={this.props.handleSubmit(this.onSubmit)} 
           className="ui form error">
           <Field 

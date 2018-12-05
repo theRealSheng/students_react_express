@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
 import { deleteStudent, clearSelectedStudent } from '../../actions';
 
-class StudentCard extends React.Component {
+class StudentAction extends React.Component {
   onDeleteClick = () => {
     const { email } = this.props.student;
     this.props.deleteStudent(email);
@@ -24,17 +24,19 @@ class StudentCard extends React.Component {
     }
 
     return (
-      <div>
-        <Link to='/' className="btn">Return Main</Link>
-        <h1>Review Student</h1>
+      <div className="wrapper">
+        <Link to='/' className="btn btn-back"><h2> &#8592; Return Main</h2></Link>
+        <div className="headline-wrapper">
+          <h1>Review Student</h1>
+        </div>
         <div><img alt={student.firstName} src={student.photo} /></div>
         <h2>{student.firstName} {student.lastName}</h2>
         <h3>Birthday: {student.birthday}</h3>
         <h3>Hobbies: </h3>
         <ul>{hobbyList}</ul>
           <div className="btn-container">
-            <button onClick={this.onDeleteClick} className="btn">Delete</button>
-            <Link to="/student-edit">Edit</Link>
+            <Link className="primary" to="/student-edit">Edit</Link>
+            <button onClick={this.onDeleteClick} className="btn danger">Delete</button>
           </div>
       </div>
     );
@@ -47,4 +49,4 @@ const maptStateToprops = (state) => {
 
 export default connect(maptStateToprops, { 
   deleteStudent, clearSelectedStudent
-})(StudentCard);
+})(StudentAction);
